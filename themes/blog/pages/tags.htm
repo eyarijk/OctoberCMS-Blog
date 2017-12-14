@@ -1,0 +1,32 @@
+title = "Теги"
+url = "/tags"
+layout = "default"
+is_hidden = 0
+==
+use Eyarij\Blog\Models\Tag;
+function onStart()
+{
+$this['tags'] = Tag::where('show_content','=','1')->paginate(20);
+}
+==
+<table class="table" style="width: 100%">
+    <thead>
+    <tr>
+        <th><abbr title="Position">ID</abbr></th>
+        <th>Заголовок</th>
+        <th><abbr title="Played">Slug</abbr></th>
+        <th>Статьи</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for tag in tags %}
+    <tr>
+        <th>{{tag.id}}</th>
+        <td>{{tag.title}}</td>
+        <td>{{tag.slug}}</td>
+        <td><a class="button is-primary is-small" href="/tag/{{tag.slug}}">Просмотреть</a></td>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{{ categories.render|raw }}

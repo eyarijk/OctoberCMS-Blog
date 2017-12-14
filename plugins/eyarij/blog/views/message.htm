@@ -1,0 +1,12 @@
+<p>
+    Новое сообщение от {{ name }} ({{email}})
+</p>
+<strong>Сообщение</strong>
+
+<p>
+    {%if not content%}
+    Без сообщения!
+    {%else%}
+    {{content}}
+    {%endif%}
+</p>

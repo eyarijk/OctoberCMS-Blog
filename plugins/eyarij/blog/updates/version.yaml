@@ -1,0 +1,15 @@
+1.0.3:
+    - Run tags table migrations
+    - create_tags_table.php
+1.0.4:
+    - Create contact table
+    - create_contacts_table.php
+1.0.5:
+    - Run Categories table migrations
+    - create_categories_table.php
+1.0.6:
+    - Create articles table
+    - create_articles_table.php
+1.0.7:
+    - Create Article Tags
+    - create_articles_tags_table.php

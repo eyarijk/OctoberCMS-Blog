@@ -1,0 +1,10 @@
+==
+use Eyarij\Blog\Models\Category;
+function onStart()
+{
+$this['categories'] = Category::where('show_content','=','1')->orderBy('id', 'desc')->limit(10)->get();
+}
+==
+{% for category in categories %}
+<li><a href="/category/{{category.slug}}">{{category.title}}</a></li>
+{% endfor %}

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Tag
+
+# Model Form Field configuration
+form: $/eyarij/blog/models/tag/fields.yaml
+
+# Model Class name
+modelClass: Eyarij\Blog\Models\Tag
+
+# Default redirect location
+defaultRedirect: eyarij/blog/tags
+
+# Create page
+create:
+    title: Create Tag
+    redirect: eyarij/blog/tags/update/:id
+    redirectClose: eyarij/blog/tags
+
+# Update page
+update:
+    title: Edit Tag
+    redirect: eyarij/blog/tags
+    redirectClose: eyarij/blog/tags
+
+# Preview page
+preview:
+    title: Preview Tag

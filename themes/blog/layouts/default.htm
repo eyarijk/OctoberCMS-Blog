@@ -1,0 +1,67 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="{{ activeLocale }}">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ 'assets/css/bulma.css'|theme }}">
+    </head>
+    <body >
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand" style="margin-left: 50px;">
+            <a class="navbar-item" href="/">
+                Blog
+            </a>
+            <a class="navbar-item" href="/">
+                Главная
+            </a>
+            <a class="navbar-item" href="/categories">
+                Категории
+            </a>
+            <a class="navbar-item" href="/tags">
+                Теги
+            </a>
+            <a class="navbar-item" href="/contact">
+                Контакты
+            </a>
+            <button class="button navbar-burger is-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+    <div class="columns">
+        <div class="column is-one-fifth" style="margin-top: 20px;">
+            <aside class="menu">
+                <ul class="menu-list">
+                    <p class="menu-label">
+                        Категории
+                    </p>
+                    {% partial "categories" %}
+                </ul>
+            </aside>
+        </div>
+        <div class="column" style="margin-top: 20px;">
+            {% page %}
+        </div>
+        <div class="column is-one-fifth" style="margin-top: 20px;">
+            <aside class="menu">
+                <ul class="menu-list">
+                    <p class="menu-label">
+                        Теги
+                    </p>
+                    {% partial "tags" %}
+                </ul>
+            </aside>
+        </div>
+    </div>
+    </div>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% framework extras %}
+    {% scripts %}
+</html>

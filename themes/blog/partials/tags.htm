@@ -1,0 +1,10 @@
+==
+use Eyarij\Blog\Models\Tag;
+function onStart()
+{
+$this['tags'] = Tag::where('show_content','=','1')->orderBy('id', 'desc')->limit(10)->get();
+}
+==
+{% for tag in tags %}
+<li><a href="/tag/{{tag.slug}}">{{tag.title}}</a></li>
+{% endfor %}

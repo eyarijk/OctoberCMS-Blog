@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/eyarij/blog/models/category/fields.yaml
+
+# Model Class name
+modelClass: Eyarij\Blog\Models\Category
+
+# Default redirect location
+defaultRedirect: eyarij/blog/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: eyarij/blog/categories/update/:id
+    redirectClose: eyarij/blog/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: eyarij/blog/categories
+    redirectClose: eyarij/blog/categories
+
+# Preview page
+preview:
+    title: Preview Category

@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Имя
+        type: text
+        span: left
+    email:
+        label: E-Mail
+        type: text
+        span: right
+    created_at:
+        label: Дата отправки
+        type: datepicker
+    section:
+        type: section
+    message:
+        label: Сообщение
+        type: richeditor
+        toolbarButtons: bold|italic
+        size: huge

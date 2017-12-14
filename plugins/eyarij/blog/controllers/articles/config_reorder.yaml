@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Сортировка записей
+
+# Attribute name
+nameFrom: title
+
+# Model Class name
+modelClass: Eyarij\Blog\Models\Article
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

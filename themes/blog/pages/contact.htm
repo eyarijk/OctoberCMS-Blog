@@ -1,0 +1,35 @@
+title = "Contact"
+url = "/contact"
+layout = "default"
+is_hidden = 0
+
+[contact]
+==
+
+==
+{% component 'contact' %}
+<form data-request="onContact" id="form" data-request-validate data-request-flash data-request-success="document.getElementById('form').reset();">
+    <div id="myDiv"></div>
+    <div class="field">
+        <label class="label">Имя</label>
+        <div class="control">
+            <input class="input" type="text" name="name" placeholder="Введите имя..."  />
+            <p class="help is-danger" data-validate-for="name">Введить name is invalid</p>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">E-mail</label>
+        <div class="control">
+            <input class="input" type="email" name="email" placeholder="Введите E-Mail..." />
+            <p class="help is-danger" data-validate-for="email">This email is invalid</p>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Сообщение</label>
+        <div class="control">
+            <textarea class="textarea" name="message" placeholder="Введите сообщение..."></textarea>
+        </div>
+    </div>
+    <button type="submit" class="button is-primary">Отправить</button>
+
+</form>

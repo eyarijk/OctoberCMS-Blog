@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Заголовок категории
+        placeholder: Введите заголовок категории...
+        type: text
+        span: left
+    slug:
+        label: Slug
+        type: text
+        span: right
+        preset: title
+    show_content:
+            label: Видимость
+            type: switch
+            on: on
+            off: off
+    section:
+            type: section

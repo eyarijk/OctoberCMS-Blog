@@ -1,0 +1,30 @@
+title = "Категории"
+url = "/categories"
+layout = "default"
+is_hidden = 0
+[allCategory]
+==
+
+
+==
+<table class="table" style="width: 100%">
+    <thead>
+    <tr>
+        <th><abbr title="Position">ID</abbr></th>
+        <th>Заголовок</th>
+        <th><abbr title="Played">Slug</abbr></th>
+        <th>Статьи</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for category in categories %}
+    <tr>
+        <th>{{category.id}}</th>
+        <td>{{category.title}}</td>
+        <td>{{category.slug}}</td>
+        <td><a class="button is-primary is-small" href="/category/{{category.slug}}">Просмотреть</a></td>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{{ categories.render|raw }}

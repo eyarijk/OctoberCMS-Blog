@@ -1,0 +1,30 @@
+url = "/article/:slug"
+layout = "default"
+[post]
+==
+
+==
+<div class="flex-container" style="margin-bottom: 100px;">
+    <div class="columns">
+        <div class="column">
+            <h1 class="title" >{{ post.title }}</h1>
+        </div>
+        <div class="column is-one-third" style="text-align: right; margin-right:20px; padding-top: 20px;">
+            <em>Сделано: {{ post.created_at|time_tense }}</em><br>
+            <em>Категория: <a href="/category/{{categories.slug}}">{{categories.title}}</a></em>
+        </div>
+    </div>
+    <hr>
+    <figure>
+        {% for image in post.images %}
+        <img src="{{ image.path }}">
+        {%endfor%}
+    <figcaption>
+    <div class="message" style="margin-top: 40px;padding: 30px;">
+        {{ post.description|raw }}
+    </div>
+    <hr>
+    <span class="">Обновлено: {{post.updated_at|time_tense}}</span>
+
+
+</div>

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+
+# Model Form Field configuration
+form: $/eyarij/blog/models/article/fields.yaml
+
+# Model Class name
+modelClass: Eyarij\Blog\Models\Article
+
+# Default redirect location
+defaultRedirect: eyarij/blog/articles
+
+# Create page
+create:
+    title: Create Article
+    redirect: eyarij/blog/articles/update/:id
+    redirectClose: eyarij/blog/articles
+
+# Update page
+update:
+    title: Edit Article
+    redirect: eyarij/blog/articles
+    redirectClose: eyarij/blog/articles
+
+# Preview page
+preview:
+    title: Preview Article

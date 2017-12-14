@@ -1,0 +1,29 @@
+url = "/category/:slug"
+layout = "default"
+[listCategory]
+==
+
+==
+{% for article in posts %}
+<div class="box">
+    <article class="media">
+        <div class="media-left">
+            <figure class="image is-128x128">
+                <img src="{{ article.images.0.path }}" alt="Image">
+            </figure>
+        </div>
+        <div class="media-content">
+            <div class="content">
+                <h3>{{article.title}}</h3>
+                <p>
+                    <strong>Administrator</strong> <small>{{article.created_at|time_since}}</small>
+                    <br>
+                    {{article.description|striptags|slice(0,200)}}
+                </p>
+            </div>
+        </div>
+    </article>
+    <a class="button is-primary" href="/article/{{article.slug}}">Подробней</a>
+</div>
+{% endfor %}
+{{ posts.render|raw }}

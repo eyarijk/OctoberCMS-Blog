@@ -1,0 +1,48 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Заголовок статьи
+        placeholder: Введите заголовок статьи...
+        type: text
+        span: left
+    slug:
+        label: Slug
+        type: text
+        span: right
+        preset: title
+    show_content:
+        label: Видимость
+        type: switch
+        on: on
+        off: off
+    created_at:
+        span: left
+        label: Дата создания статьи
+        type: datepicker
+    updated_at:
+        span: right
+        label: Дата обновления статьи
+        type: datepicker
+    tags:
+        type: taglist
+        label: Теги
+        span: right
+        mode: relation
+        nameFrom: title
+    category:
+        label: Категория
+        type: relation
+        span: left
+        nameFrom: title
+    section:
+        type: section
+    description:
+        label: Текст статьи
+        type: richeditor
+    images:
+        label: Изображение
+        type: fileupload
+        mode: image

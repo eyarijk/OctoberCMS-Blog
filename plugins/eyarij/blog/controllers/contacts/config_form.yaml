@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Contact
+
+# Model Form Field configuration
+form: $/eyarij/blog/models/contact/fields.yaml
+
+# Model Class name
+modelClass: Eyarij\Blog\Models\Contact
+
+# Default redirect location
+defaultRedirect: eyarij/blog/contacts
+
+# Create page
+create:
+    title: Create Contact
+    redirect: eyarij/blog/contacts/update/:id
+    redirectClose: eyarij/blog/contacts
+
+# Update page
+update:
+    title: Edit Contact
+    redirect: eyarij/blog/contacts
+    redirectClose: eyarij/blog/contacts
+
+# Preview page
+preview:
+    title: Preview Contact
